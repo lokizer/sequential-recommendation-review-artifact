@@ -1,0 +1,11 @@
+name: duospectra
+channels:
+  - defaults
+dependencies:
+  - python=3.10
+  - numpy=1.24.3
+  - scipy=1.11.1
+  - pip
+  - pip:
+      - torch==2.7.0
+      - tqdm==4.65.0

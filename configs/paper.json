@@ -1,0 +1,56 @@
+{
+  "model_id": "duospectra_asymmetric_gate_v1",
+  "seed": 42,
+  "common": {
+    "learning_rate": 0.0005,
+    "batch_size": 256,
+    "epochs": 200,
+    "patience": 10,
+    "max_sequence_length": 50,
+    "hidden_size": 64,
+    "num_hidden_layers": 2,
+    "num_attention_heads": 2,
+    "frequency_cutoff": 5,
+    "spectral_alpha": 0.45,
+    "high_pass_init": 0.25,
+    "wavelet_init": 0.02
+  },
+  "datasets": {
+    "Beauty": {
+      "dropout": 0.45,
+      "expected_alpha_original": 0.45,
+      "expected_test": {
+        "HR@5": 0.076466,
+        "NDCG@5": 0.053946,
+        "HR@10": 0.105934,
+        "NDCG@10": 0.063399,
+        "HR@20": 0.143585,
+        "NDCG@20": 0.072902
+      }
+    },
+    "LastFM": {
+      "dropout": 0.50,
+      "expected_alpha_original": 0.05,
+      "expected_test": {
+        "HR@5": 0.062385,
+        "NDCG@5": 0.042435,
+        "HR@10": 0.085321,
+        "NDCG@10": 0.049613,
+        "HR@20": 0.128440,
+        "NDCG@20": 0.060533
+      }
+    },
+    "Toys_and_Games": {
+      "dropout": 0.50,
+      "expected_alpha_original": 0.45,
+      "expected_test": {
+        "HR@5": 0.083557,
+        "NDCG@5": 0.060202,
+        "HR@10": 0.114671,
+        "NDCG@10": 0.070236,
+        "HR@20": 0.150938,
+        "NDCG@20": 0.079370
+      }
+    }
+  }
+}

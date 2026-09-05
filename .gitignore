@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*.pt
+*.pth
+*.log
+.idea/
+.vscode/
+.DS_Store
+src/output/*
+!src/output/.gitkeep
+results/*
+!results/.gitkeep
