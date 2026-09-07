@@ -20,6 +20,14 @@ at most the 50 most recent input items and left-pads shorter sequences.
 
 ## Sources
 
+Amazon interactions are retained positive-rating reviews, not product-text
+inputs. LastFM interactions come from timestamped user-artist tagging records;
+they must not be described as playback counts or complete listening sessions.
+The upstream LastFM parser retains the first encountered record for each
+user-artist pair before chronological ordering. Iterative 5-core filtering
+then retains users and items with at least five interactions. The model reads
+the processed integer sequences, not ratings, raw timestamps, or tag text.
+
 - Beauty and Toys and Games originate from the Amazon Review Data published by
   Julian McAuley and collaborators:
   <https://snap.stanford.edu/data/amazon/productGraph/>
